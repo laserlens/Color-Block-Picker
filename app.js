@@ -7,6 +7,7 @@ $('#startButton').click(function start() {
   number = 1 + Math.floor(Math.random() * 4);
   //resets game on start click
   $('#trophy').text('');
+  $('.color').text('Click Here');
 // switch statement promps what color to click
   switch (number) {
     case 1:
@@ -40,47 +41,57 @@ $('#startButton').click(function start() {
 $('#red').click(function () {
   console.log(number);
   switch (number) {
-    case number = 1:
+    case 1:
       $('#trophy').text('You Won Press Start to Play agian');
-      /*
-      $('#red').animate({ 'backgroundColor', "white"}, 'slow');
-      $('#red').animate({ 'backgroundColor', "red"}, 'slow');
-      $('#red').animate({ 'backgroundColor', "white"}, 'slow');
-      $('#red').animate({ 'backgroundColor', "red"}, 'slow');
-      */
+      for(i=0;i<3;i++) {
+        $(this).fadeTo('slow', 0.5).text("WINNER Press Start to Play again").fadeTo('slow', 1.0);
+      }
       break;
     default:
       $('#trophy').text('Wrong Choose Another Color');
+      $(this).text('Wrong Try Another Color');
   }
 });
 $('#green').click(function () {
   console.log(number);
   switch (number) {
-    case number = 2:
+    case 2:
       $('#trophy').text('You Won Press Start to Play agian');
+      for(i=0;i<3;i++) {
+        $(this).fadeTo('slow', 0.5).text("WINNER  Press Start to Play again").fadeTo('slow', 1.0);
+      }
       break;
     default:
       $('#trophy').text('Wrong Choose Another Color');
+      $(this).text('Wrong Try Another Color');
   }
 });
 $('#yellow').click(function () {
   console.log(number);
   switch (number) {
-    case number = 3:
+    case 3:
       $('#trophy').text('You Won Press Start to Play agian');
+      for(i=0;i<3;i++) {
+        $(this).fadeTo('slow', 0.5).text("WINNER  Press Start to Play again").fadeTo('slow', 1.0);
+      }
       break;
     default:
       $('#trophy').text('Wrong Choose Another Color');
+      $(this).text('Wrong Try Another Color');
   }
 });
 $('#blue').click(function () {
   console.log(number);
   switch (number) {
-    case number = 1:
-      $('#trophy').text('You Won Press Start to Play agian');
+    case 4:
+      $('#trophy').text('You Won ');
+      for(i=0;i<3;i++) {
+        $(this).fadeTo('slow', 0.5).text("WINNER  Press Start to Play again").fadeTo('slow', 1.0);
+      }
       break;
     default:
       $('#trophy').text('Wrong Choose Another Color');
+      $(this).text('Wrong Try Another Color');
   }
 });
 });
